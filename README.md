@@ -40,10 +40,9 @@ LocalHDS is a Python-based program designed to manage and automate local host-do
 
 ## Usage
 
-1. Run the Program:
+1. Run the Program (With Admininstrator! | Will not work when you only open the CMD (with admim) then File):
    ```python main.py```
-
-2. Menu Options:
+03. Menu Options:
    - 1: Change the local domain URL.
    - 2: Add a new domain and IP entry.
    - 3: Remove an existing domain and IP entry.
@@ -56,7 +55,7 @@ LocalHDS is a Python-based program designed to manage and automate local host-do
    - 10: Generate Flask server files.
    - 11: Start the last generated server file.
 
-3. Website Generation:
+4. Website Generation:
    - Add URL paths (e.g., /page) to define routes for the Flask server.
    - The program will generate Flask server files and basic HTML templates in the templates directory.
 
