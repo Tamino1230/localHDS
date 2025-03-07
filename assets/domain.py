@@ -106,7 +106,7 @@ def change_local_domain(old_domain):
         elif value.lower() == "cancel":
             print("Canceling")
             value = old_domain
-        elif not "." in value:
+        elif not "." in value or " " in value:
             print("This is not a real Domain! <example.net>")
             continue
         return value.lower()
