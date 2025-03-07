@@ -1,4 +1,4 @@
-# LocalHDS (Local Host-Domain-Switch) by Tamino1230
+# LocalHDS (Local Host-Domain-Switch) by [Tamino1230](https://discord.com/users/702893526303637604)
 
 LocalHDS is a Python-based program designed to manage and automate local host-domain settings. It allows you to add, remove, and manage local domains and IPs, as well as generate Flask-based web servers with customizable URL paths.
 
@@ -31,7 +31,7 @@ LocalHDS is a Python-based program designed to manage and automate local host-do
 
 3. Clone the Repository:
    ```
-   git clone https://github.com/YourUsername/localHDS.git
+   git clone https://github.com/Tamino1230/localHDS.git
    cd localHDS
    ```
 
@@ -87,7 +87,7 @@ This project is licensed under the MIT License.
 
 ## Acknowledgments
 
-Developed by Tamino1230.
+Developed by [Tamino1230](https://discord.com/users/702893526303637604).
 
 ## My Socials:
 - [Discord](https://discord.com/users/702893526303637604)
