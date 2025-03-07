@@ -12,7 +12,6 @@ def handler(value, function):
         case -2: #- If User didnt start the program with Administrator
             print(f"Handler: Permission denied. Run the script as an Administrator! Because of \"{function.__name__}\"")
             show("Permission denied!", "Run the script as an Administrator!", "error")
-            exit()
         case -3:
             print("Handler: File not found.")
             show("Not Found", "The inputed file was not Found", "warn")
