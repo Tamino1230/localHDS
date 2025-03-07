@@ -80,6 +80,23 @@ LocalHDS is a Python-based program designed to manage and automate local host-do
 - Some functions require administrator privileges (e.g., modifying the host file). Ensure you run the program with elevated permissions.
 - Update the HOST_PATH, IP, and DOMAIN variables to suit your configuration.
 
+## What is it useful for?
+
+### Local Web Development
+Developers can set up local testing environments and map specific domains to their projects locally. Instead of using lengthy IP addresses, user-friendly domain names (e.g., `example.net`) can be utilized to enhance the development workflow.
+
+### Domain Management
+The tool provides the capability to add or remove local domains, as well as an overview of active entries in the host file, streamlining domain configurations.
+
+### Logging and Traceability
+With built-in logging functionality, all changes are recorded and can be saved if needed. This feature is especially valuable in team settings or for audit purposes.
+
+### Automated Website Generation
+The program incorporates functions to quickly generate Flask-based web servers. Users can define URL paths, and the program automatically creates the necessary HTML templates and server files. This saves development time and allows for rapid prototyping.
+
+## Summary
+Overall, LocalHDS is a versatile tool for developers who want to optimize and enhance the flexibility of their local development environments. It combines ease of use with powerful automation, making complex processes like host file management and local web server configuration much simpler and more efficient.
+
 ## License
 
 This project is licensed under the MIT License.
