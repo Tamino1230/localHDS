@@ -118,11 +118,15 @@ def main(HOST_PATH, IP, DOMAIN, PROGRAM_NAME):
                         print("Trying to start server with Domains and Path URL's: ")
                         show_all_sites(esl)
                         handler(list_domains(HOST_PATH), list_domains)
-                        LAST_GEN = f"{server_file_name}"
                         print(f"Successfully started {server_file_name} File.")
+                        print("Server accepted")
                         os.system(f"python {server_file_name}")
                     except:
-                        print(f"An error accured while starting: {server_file_name}. Or Server got closed")
+                        print(f"An error in {server_file_name}. Or Server got closed")
+                        print("Except accepted")
+                    finally:
+                        LAST_GEN = f"{server_file_name}"
+                        print("Finally accepted")
             case "11":
                 print("Trying to start last server with Domains and Path URL's: ")
                 show_all_sites(esl)
