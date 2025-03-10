@@ -2,6 +2,8 @@
 def safe_input(msg: str = "default", data_type = str):
     while True:
         try:
+            user_input = ""
+            message = ""
             user_input = input(msg)
             value = data_type(user_input)
             return value #- Only returns if worked
