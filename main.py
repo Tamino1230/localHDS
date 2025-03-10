@@ -4,7 +4,6 @@
 # import Online
 import time
 import os
-from colorama import Fore
 
 # import Local
 from assets.inputer import safe_input, menue, user_add_url_path, user_remove_url_path, show_all_sites
