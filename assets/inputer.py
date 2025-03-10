@@ -18,7 +18,7 @@ def safe_input(msg: str = "default", data_type = str):
             continue #- Only allowed inputs
 
 def menue(): #- Menu to print
-    avbl = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
+    avbl = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
     print()
     print("| LocalHDS Build")
     print("1) Change Local Domain URL")
@@ -36,6 +36,7 @@ def menue(): #- Menu to print
     print("9) Show all Pages")
     print("10) Generate File")
     print("11) Start Last Generated File")
+    print("12) Exit")
 
     while True:
         choice = safe_input(f"Enter you choice ({avbl[0]}-{avbl[-1]}): ")
