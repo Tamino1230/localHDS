@@ -29,9 +29,9 @@ def menue(): #- Menu to print
     print("6) Save Log History")
     print()
     print("| Website Build")
-    print("7) New Page (in work)")
-    print("8) Remove Page (in work)")
-    print("9) Show all Pages (in work)")
+    print("7) New Page")
+    print("8) Remove Page")
+    print("9) Show all Pages")
     print("10) Generate File")
     print("11) Start Last Generated File")
 
@@ -67,7 +67,7 @@ def user_add_url_path(existing_sites_list: list):
 def user_remove_url_path(existing_sites_list: list):
     show_all_sites(existing_sites_list)
     while True:
-        url_path = safe_input("Which site do you want to remove? <leave it empty for homepage>: ")
+        url_path = safe_input("Which site do you want to remove? <leave it empty for homepage> (cancel): ")
         url_path = "/" + url_path
         if not url_path in existing_sites_list:
             print("This site is not in use!")
