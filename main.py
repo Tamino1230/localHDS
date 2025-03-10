@@ -30,7 +30,7 @@ PROGRAM_NAME = ['''
 #- main function
 def main(HOST_PATH, IP, DOMAIN, PROGRAM_NAME):
     logs = []
-    esl = ["/", "/page"]
+    esl = []
     
     # print(esl)
     # handler(user_add_url_path(esl), user_add_url_path)
