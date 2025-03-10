@@ -4,6 +4,7 @@
 # import Online
 import time
 import os
+from colorama import Fore
 
 # import Local
 from assets.inputer import safe_input, menue, user_add_url_path, user_remove_url_path, show_all_sites
@@ -30,7 +31,6 @@ PROGRAM_NAME = ['''
 def main(HOST_PATH, IP, DOMAIN, PROGRAM_NAME):
     logs = []
     esl = []
-    
     # print(esl)
     # handler(user_add_url_path(esl), user_add_url_path)
     # print(esl)
@@ -141,6 +141,12 @@ def main(HOST_PATH, IP, DOMAIN, PROGRAM_NAME):
                     print(f"An error accured in {LAST_GEN} or Server got close!d")
                 finally:
                     add_log(logs, "Server", f"Started the last used Server: {LAST_GEN}")
+            case "12":
+                print("Existing..")
+                time.sleep(TIME)
+                print(PROGRAM_NAME[0])
+                time.sleep(TIME * 4)
+                exit("Exiting out!")
             case _:
                 print("idk")
                 add_log(logs, "idk", "uwu")
