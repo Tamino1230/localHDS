@@ -97,14 +97,17 @@ def main(HOST_PATH, IP, DOMAIN, PROGRAM_NAME):
             case "7":
                 os.system('cls')
                 user_add_url_path(esl)
+                add_log(logs, "HTML", "Added a new Page")
                 print("Succesfully added new Site or cancelt!")
             case "8":
                 os.system('cls')
                 user_remove_url_path(esl)
+                add_log(logs, "HTML", "Removed a Page")
                 print("Succesfully removed the Site or cancelt!")
             case "9":
                 os.system('cls')
                 show_all_sites(esl)
+                add_log(logs, "HTML", "Show all Pages")
             case "10":
                 os.system('cls')
                 if esl == []:
@@ -119,14 +122,12 @@ def main(HOST_PATH, IP, DOMAIN, PROGRAM_NAME):
                         show_all_sites(esl)
                         handler(list_domains(HOST_PATH), list_domains)
                         print(f"Successfully started {server_file_name} File.")
-                        print("Server accepted")
                         os.system(f"python {server_file_name}")
                     except:
-                        print(f"An error in {server_file_name}. Or Server got closed")
-                        print("Except accepted")
+                        print(f"An error accured while starting: {server_file_name}. Or Server got closed")
                     finally:
                         LAST_GEN = f"{server_file_name}"
-                        print("Finally accepted")
+                        add_log(logs, "Server", f"Generated Server: {server_file_name}")
             case "11":
                 print("Trying to start last server with Domains and Path URL's: ")
                 show_all_sites(esl)
@@ -135,9 +136,15 @@ def main(HOST_PATH, IP, DOMAIN, PROGRAM_NAME):
                 if LAST_GEN == "":
                     print("You have not Started a Server before!")
                     continue
-                os.system(f"python {LAST_GEN}")
+                try:
+                    os.system(f"python {LAST_GEN}")
+                except:
+                    print(f"An error accured in {LAST_GEN} or Server got close!d")
+                finally:
+                    add_log(logs, "Server", f"Started the last used Server: {LAST_GEN}")
             case _:
                 print("idk")
+                add_log(logs, "idk", "uwu")
         time.sleep(TIME)
 
 if __name__ == "__main__":
