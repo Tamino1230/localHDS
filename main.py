@@ -113,20 +113,23 @@ def main(HOST_PATH, IP, DOMAIN, PROGRAM_NAME):
                     print("You dont have enough Path URLS to make a Server!!\n")
                 else:
                     server_file_name = f"server_{time.time()}.py"
-                    generate(server_file_name, esl)
-                    print(f"Successfully Generated Server File!: {server_file_name}")
-                    print("Starting Server File..")
                     try:
-                        print("Trying to start server with Domains and Path URL's: ")
-                        show_all_sites(esl)
-                        handler(list_domains(HOST_PATH), list_domains)
-                        print(f"Successfully started {server_file_name} File.")
-                        os.system(f"python {server_file_name}")
-                    except:
-                        print(f"An error accured while starting: {server_file_name}. Or Server got closed")
-                    finally:
-                        LAST_GEN = f"{server_file_name}"
-                        add_log(logs, "Server", f"Generated Server: {server_file_name}")
+                        generate(server_file_name, esl)
+                        print(f"Successfully Generated Server File!: {server_file_name}")
+                        print("Starting Server File..")
+                        try:
+                            print("Trying to start server with Domains and Path URL's: ")
+                            show_all_sites(esl)
+                            handler(list_domains(HOST_PATH), list_domains)
+                            print(f"Successfully started {server_file_name} File.")
+                            os.system(f"python {server_file_name}")
+                        except:
+                            print(f"An error accured while starting: {server_file_name}. Or Server got closed")
+                        finally:
+                            LAST_GEN = f"{server_file_name}"
+                            add_log(logs, "Server", f"Generated Server: {server_file_name}")
+                    except Exception as e:
+                        print("An error Accured: {e}")
             case "11":
                 print("Trying to start last server with Domains and Path URL's: ")
                 show_all_sites(esl)
